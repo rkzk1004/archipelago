@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Austrailian City-Making Archipelago</title>
+</head>
+
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- gsap -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+
+  <!-- lenis -->
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script> 
+
+  <!-- split -->
+  <script defer src="./assets/js/split.min.js"></script>
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <script defer src="./assets/js/main.js"></script>
+
+<body>
+
+  <div class="cursor"></div>
+
+  <section class="sc-intro-motion">
+    <div class="inner">
+      <div class="group-ico">
+        <i class="ico-archipelago">
+          <svg viewBox="0 0 165 245" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_5756_1722)">
+            <path d="M114.145 114.748H50.519L82.2362 33.0332L110.92 106.895V106.859L140.059 181.064H164.545V164.033L100.127 3.7251H64.3571L-0.0605469 164.033V181.064H24.5817L39.9307 141.573H103.677L114.145 114.748Z" fill="currentColor"></path>
+            </g>
+            <defs>
+            <clipPath id="clip0_5756_1722">
+            <rect width="164.549" height="244.648" fill="currentColor"></rect>
+            </clipPath>
+            </defs>
+          </svg>
+          <span class="ico-second-wrap">
+            <svg viewBox="0 0 1055 245" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M164.504 147.285L185.405 163.429C174.589 175.351 159.468 183.796 142.344 183.796C109.86 183.796 81.4043 157.22 81.4043 123.441C81.4043 89.6624 109.344 63.0864 142.344 63.0864C158.209 63.0864 174.829 69.5441 182.887 80.721L164.253 99.349C159.72 93.8848 151.914 88.6689 142.344 88.6689C122.954 88.6689 108.601 105.062 108.601 123.441C108.601 141.821 122.954 158.214 142.344 158.214C151.902 158.214 158.964 153.494 164.504 147.285Z" fill="currentColor"></path>
+              <path d="M892.055 110.526C892.055 98.107 882.737 88.1721 869.894 88.1721C857.052 88.1721 847.986 98.107 847.986 110.526C847.986 122.944 857.304 132.879 869.894 132.879C882.485 132.879 892.055 123.193 892.055 110.526ZM842.194 204.411C842.194 212.111 849.497 220.059 864.115 220.059H878.468C892.067 220.059 898.866 211.862 898.866 204.411C898.866 198.202 894.081 192.241 885.016 192.241H853.538C852.783 192.241 851.776 192.489 851.02 192.489C845.228 194.973 842.206 199.444 842.206 204.411M923.544 89.6623H911.708C914.73 95.8716 916.997 103.82 916.997 110.526C916.997 136.605 895.844 156.972 869.906 156.972C862.1 156.972 854.546 154.736 847.998 151.259C845.48 152.749 844.221 155.233 844.221 158.213C844.221 162.684 847.243 167.403 853.538 167.403H885.016C910.185 167.403 923.784 187.522 923.784 203.678C923.784 213.861 919.503 224.778 911.696 231.98C905.905 237.445 895.328 244.659 878.456 244.659H864.103C835.647 244.659 818.008 226.28 818.008 207.652C818.008 197.22 824.567 186.043 831.606 182.069C824.555 176.853 821.03 169.402 821.03 161.703C821.03 153.506 825.059 145.061 832.865 138.852C826.57 131.153 823.044 121.714 823.044 110.538C823.044 85.4518 842.938 63.8433 869.882 63.8433C881.97 63.8433 891.791 67.8172 899.849 74.5233L908.663 65.8303H923.52V89.6741L923.544 89.6623Z" fill="currentColor"></path>
+              <path d="M1027.08 123.442C1027.08 104.814 1012.98 88.9184 993.587 88.9184C974.196 88.9184 959.843 104.814 959.843 123.442C959.843 142.07 974.196 158.215 993.587 158.215C1012.98 158.215 1027.08 142.07 1027.08 123.442ZM1054.53 123.442C1054.53 157.47 1026.57 183.797 993.587 183.797C960.598 183.797 932.395 157.458 932.395 123.442C932.395 89.427 960.346 63.3359 993.587 63.3359C1026.83 63.3359 1054.53 89.427 1054.53 123.442Z" fill="currentColor"></path>
+              <path d="M338.032 65.8193H320.656V181.065H347.589V75.2575L338.032 65.8193Z" fill="currentColor"></path>
+              <path d="M654.725 3.2876H637.361V181.052H664.294V12.7258L654.725 3.2876Z" fill="currentColor"></path>
+              <path d="M351.198 19.0065C351.198 8.51567 342.577 0 331.928 0C321.28 0 312.658 8.50384 312.658 19.0065C312.658 29.5092 321.292 38.013 331.928 38.013C342.565 38.013 351.198 29.5092 351.198 19.0065Z" fill="currentColor"></path>
+              <path d="M70.0614 63.5831C57.2186 63.5831 46.6422 70.2892 40.8504 78.4855L28.0076 65.8185H16.6758V181.052H43.6204V110.017C43.6204 99.3371 54.1968 91.6375 65.2648 91.6375C68.0348 91.6375 71.0566 92.1343 73.8267 93.1278L81.633 65.3099C77.6039 64.0562 73.5748 63.5713 70.0494 63.5713" fill="currentColor"></path>
+              <path d="M431.525 158.214C412.135 158.214 397.29 143.063 397.29 123.441C397.29 103.82 412.135 88.6689 431.525 88.6689C450.915 88.6689 466.276 103.82 466.276 123.441C466.276 143.063 450.915 158.214 431.525 158.214ZM433.54 63.0864C415.912 63.0864 404.569 71.5311 397.53 78.9823L384.435 65.8185H372.6V243.146H399.544V170.124C404.569 175.091 415.9 183.796 433.54 183.796C467.02 183.796 493.473 156.227 493.473 123.441C493.473 90.6559 467.02 63.0864 433.54 63.0864Z" fill="currentColor"></path>
+              <path d="M256.936 64.0807C244.345 64.0807 234.776 68.7998 226.718 75.7542V12.3243L217.053 2.7915H199.773V181.053H226.718V107.783C226.718 97.5993 236.791 89.6514 250.137 89.6514C262.476 89.6514 271.29 96.8542 271.29 112.005V181.053H298.738V112.005C298.738 77.481 278.089 64.0689 256.936 64.0689" fill="currentColor"></path>
+              <path d="M742.347 158.214C722.969 158.214 707.608 143.063 707.608 123.441C707.608 103.82 722.969 88.6689 742.347 88.6689C761.725 88.6689 776.355 103.82 776.355 123.441C776.355 143.063 761.498 158.214 742.347 158.214ZM801.021 65.8185H785.672L774.34 76.9954C767.038 70.2893 756.461 63.0864 740.093 63.0864C706.601 63.0864 680.16 90.4194 680.16 123.441C680.16 156.463 706.601 183.796 740.345 183.796C758.224 183.796 769.304 175.103 774.34 169.887L785.672 181.064H801.021V65.8185Z" fill="currentColor"></path>
+              <path d="M565.587 86.6819C579.929 86.6819 591.776 96.3685 593.527 109.284H536.868C539.638 96.1201 551.221 86.6819 565.587 86.6819ZM592.376 143.382C586.512 152.501 576.187 158.959 565.827 158.959C550.466 158.959 537.119 147.534 535.609 130.396H620.471V120.697C619.464 90.6441 598.815 63.0864 565.587 63.0864C532.359 63.0864 508.412 91.1527 508.412 123.69C508.412 156.227 532.335 183.808 565.827 183.808C586.92 183.808 602.772 172.264 612.281 158.781L592.364 143.394L592.376 143.382Z" fill="currentColor"></path>
+            </svg>
+          </span>
+          <svg viewBox="0 0 40 245" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_5756_1719)">
+            <path d="M39.0539 19.0065C39.0539 8.51567 30.4321 0 19.7838 0C9.13547 0 0.513672 8.50384 0.513672 19.0065C0.513672 29.5092 9.14747 38.013 19.7838 38.013C30.4202 38.013 39.0539 29.5092 39.0539 19.0065Z" fill="currentColor"></path>
+            </g>
+            <defs>
+            <clipPath id="clip0_5756_1719">
+            <rect width="38.5273" height="244.648" fill="currentColor" transform="translate(0.527344)"></rect>
+            </clipPath>
+            </defs>
+          </svg>
+        </i>
+      </div>
+    </div>
+
+    <div class="group-text">
+      <div class="title-area">
+        <div class="title"><span>Cities</span></div>
+        <div class="title"><span>People</span></div>
+        <div class="title"><span>Design</span></div>
+      </div>
+      <p class="desc">Archipelago acknowledges the Turrbal and Yuggera people as the Traditional Custodians of the land on which our office is located, where we are privileged to design and create. We pay our respects to Elders past, present, and emerging.</p>
+    </div>
+    
+    <div class="group-img">
+      <img src="./assets/images/intro-motion-unshade.webp" alt>
+      <img class="shade" src="./assets/images/intro-motion-shade.webp" alt>
+    </div>
+  </section>
+
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="blind">Archipelago 헤더</h1>
+
+      <nav class="group-gnb">
+        <div class="inner">    
+          <ul class="gnb-list">
+            <li class="gnb-item">
+              <a href="">Projects</a>
+            </li>
+            <li class="gnb-item">
+              <span>Practice</span>
+              <svg width="100%" viewBox="0 0 21 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.65625 0.86316L1.34399 0.137207L10.5001 8.81143L19.6562 0.137207L20.344 0.86316L10.5001 10.1889L0.65625 0.86316Z" fill="currentColor"></path>
+              </svg>
+              <ul class="gnb-sublist">
+                <li class="gnb-subitem"><a href="">About Us</a></li>
+                <li class="gnb-subitem"><a href="">Workshops</a></li>
+              </ul>
+            </li>
+            <li class="gnb-item">
+              <span>People</span>
+              <svg width="100%" viewBox="0 0 21 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.65625 0.86316L1.34399 0.137207L10.5001 8.81143L19.6562 0.137207L20.344 0.86316L10.5001 10.1889L0.65625 0.86316Z" fill="currentColor"></path>
+              </svg>
+              <ul class="gnb-sublist">
+                <li class="gnb-subitem"><a href="">Team</a></li>
+                <li class="gnb-subitem"><a href="">Careers</a></li>
+              </ul>
+            </li>
+            <li class="gnb-item">
+              <span>Resources</span>
+              <svg width="100%" viewBox="0 0 21 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.65625 0.86316L1.34399 0.137207L10.5001 8.81143L19.6562 0.137207L20.344 0.86316L10.5001 10.1889L0.65625 0.86316Z" fill="currentColor"></path>
+              </svg>
+              <ul class="gnb-sublist">
+                <li class="gnb-subitem"><a href="">Articles</a></li>
+              </ul>
+            </li>
+            <li class="gnb-item">
+              <a href="">Contact</a>
+            </li>
+          </ul>
+
+          <button class="btn-menu" aria-label="서브메뉴" aria-expanded="false">
+            <svg width="100%" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 24H28V21.3333H4V24ZM4 17.3333H28V14.6667H4V17.3333ZM4 8V10.6667H28V8H4Z" fill="currentColor"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    
+      <div class="group-search">
+        <div class="inner">
+          <i class="ico-archipelago">
+            <svg width="100%" viewBox="0 0 165 245" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_5756_1722)">
+              <path d="M114.145 114.748H50.519L82.2362 33.0332L110.92 106.895V106.859L140.059 181.064H164.545V164.033L100.127 3.7251H64.3571L-0.0605469 164.033V181.064H24.5817L39.9307 141.573H103.677L114.145 114.748Z" fill="currentColor"></path>
+              </g>
+              <defs>
+              <clipPath id="clip0_5756_1722">
+              <rect width="164.549" height="244.648" fill="currentColor"></rect>
+              </clipPath>
+              </defs>
+            </svg>
+            <svg width="100%" viewBox="0 0 40 245" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_5756_1719)">
+              <path d="M39.0539 19.0065C39.0539 8.51567 30.4321 0 19.7838 0C9.13547 0 0.513672 8.50384 0.513672 19.0065C0.513672 29.5092 9.14747 38.013 19.7838 38.013C30.4202 38.013 39.0539 29.5092 39.0539 19.0065Z" fill="currentColor"></path>
+              </g>
+              <defs>
+              <clipPath id="clip0_5756_1719">
+              <rect width="38.5273" height="244.648" fill="currentColor" transform="translate(0.527344)"></rect>
+              </clipPath>
+              </defs>
+            </svg>
+          </i>
+
+          <ul class="mobile-list">
+            <li class="mobile-item">
+              <a href="" class="title">Projects</a>
+            </li>
+            <li class="mobile-item">
+              <div class="title-area">
+                <span class="title">Practice</span>
+                <svg width="100%" viewBox="0 0 21 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.65625 0.86316L1.34399 0.137207L10.5001 8.81143L19.6562 0.137207L20.344 0.86316L10.5001 10.1889L0.65625 0.86316Z" fill="currentColor"></path>
+                </svg>
+              </div>
+              <ul class="mobile-sublist">
+                <li class="mobile-subitem"><a href="">About Us</a></li>
+                <li class="mobile-subitem"><a href="">Workshops</a></li>
+              </ul>
+            </li>
+            <li class="mobile-item">
+              <div class="title-area">
+                <span class="title">People</span>
+                <svg width="100%" viewBox="0 0 21 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.65625 0.86316L1.34399 0.137207L10.5001 8.81143L19.6562 0.137207L20.344 0.86316L10.5001 10.1889L0.65625 0.86316Z" fill="currentColor"></path>
+                </svg>
+              </div>
+              <ul class="mobile-sublist">
+                <li class="mobile-subitem"><a href="">Team</a></li>
+                <li class="mobile-subitem"><a href="">Careers</a></li>
+              </ul>
+            </li>
+            <li class="mobile-item">
+              <div class="title-area">
+                <span class="title">Resources</span>
+                <svg width="100%" viewBox="0 0 21 11" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.65625 0.86316L1.34399 0.137207L10.5001 8.81143L19.6562 0.137207L20.344 0.86316L10.5001 10.1889L0.65625 0.86316Z" fill="currentColor"></path>
+                </svg>
+              </div>
+              <ul class="mobile-sublist">
+                <li class="mobile-subitem"><a href="">Articles</a></li>
+              </ul>
+            </li>
+            <li class="mobile-item">
+              <a href="" class="title">Contact</a>
+            </li>
+          </ul>
+
+          <form method="get">
+            <fieldset>
+              <legend class="blind">검색</legend>
+              <input type="text" class="input-text" placeholder="Search...">
+              <input type="submit" value="" class="input-submit" aria-label="검색" aria-expanded="false">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="sc-intro">
+        <h2 class="blind">Archipelago 인트로</h2>
+
+        <div class="inner">
+          <div class="group-content">
+            <i class="ico-archipelago">
+              <svg width="100%" viewBox="0 0 165 245" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_5756_1722)">
+                <path d="M114.145 114.748H50.519L82.2362 33.0332L110.92 106.895V106.859L140.059 181.064H164.545V164.033L100.127 3.7251H64.3571L-0.0605469 164.033V181.064H24.5817L39.9307 141.573H103.677L114.145 114.748Z" fill="currentColor"></path>
+                </g>
+                <defs>
+                <clipPath id="clip0_5756_1722">
+                <rect width="164.549" height="244.648" fill="currentColor"></rect>
+                </clipPath>
+                </defs>
+              </svg>
+              <span class="ico-second-wrap">
+                <svg viewBox="0 0 1055 245" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M164.504 147.285L185.405 163.429C174.589 175.351 159.468 183.796 142.344 183.796C109.86 183.796 81.4043 157.22 81.4043 123.441C81.4043 89.6624 109.344 63.0864 142.344 63.0864C158.209 63.0864 174.829 69.5441 182.887 80.721L164.253 99.349C159.72 93.8848 151.914 88.6689 142.344 88.6689C122.954 88.6689 108.601 105.062 108.601 123.441C108.601 141.821 122.954 158.214 142.344 158.214C151.902 158.214 158.964 153.494 164.504 147.285Z" fill="currentColor"></path>
+                  <path d="M892.055 110.526C892.055 98.107 882.737 88.1721 869.894 88.1721C857.052 88.1721 847.986 98.107 847.986 110.526C847.986 122.944 857.304 132.879 869.894 132.879C882.485 132.879 892.055 123.193 892.055 110.526ZM842.194 204.411C842.194 212.111 849.497 220.059 864.115 220.059H878.468C892.067 220.059 898.866 211.862 898.866 204.411C898.866 198.202 894.081 192.241 885.016 192.241H853.538C852.783 192.241 851.776 192.489 851.02 192.489C845.228 194.973 842.206 199.444 842.206 204.411M923.544 89.6623H911.708C914.73 95.8716 916.997 103.82 916.997 110.526C916.997 136.605 895.844 156.972 869.906 156.972C862.1 156.972 854.546 154.736 847.998 151.259C845.48 152.749 844.221 155.233 844.221 158.213C844.221 162.684 847.243 167.403 853.538 167.403H885.016C910.185 167.403 923.784 187.522 923.784 203.678C923.784 213.861 919.503 224.778 911.696 231.98C905.905 237.445 895.328 244.659 878.456 244.659H864.103C835.647 244.659 818.008 226.28 818.008 207.652C818.008 197.22 824.567 186.043 831.606 182.069C824.555 176.853 821.03 169.402 821.03 161.703C821.03 153.506 825.059 145.061 832.865 138.852C826.57 131.153 823.044 121.714 823.044 110.538C823.044 85.4518 842.938 63.8433 869.882 63.8433C881.97 63.8433 891.791 67.8172 899.849 74.5233L908.663 65.8303H923.52V89.6741L923.544 89.6623Z" fill="currentColor"></path>
+                  <path d="M1027.08 123.442C1027.08 104.814 1012.98 88.9184 993.587 88.9184C974.196 88.9184 959.843 104.814 959.843 123.442C959.843 142.07 974.196 158.215 993.587 158.215C1012.98 158.215 1027.08 142.07 1027.08 123.442ZM1054.53 123.442C1054.53 157.47 1026.57 183.797 993.587 183.797C960.598 183.797 932.395 157.458 932.395 123.442C932.395 89.427 960.346 63.3359 993.587 63.3359C1026.83 63.3359 1054.53 89.427 1054.53 123.442Z" fill="currentColor"></path>
+                  <path d="M338.032 65.8193H320.656V181.065H347.589V75.2575L338.032 65.8193Z" fill="currentColor"></path>
+                  <path d="M654.725 3.2876H637.361V181.052H664.294V12.7258L654.725 3.2876Z" fill="currentColor"></path>
+                  <path d="M351.198 19.0065C351.198 8.51567 342.577 0 331.928 0C321.28 0 312.658 8.50384 312.658 19.0065C312.658 29.5092 321.292 38.013 331.928 38.013C342.565 38.013 351.198 29.5092 351.198 19.0065Z" fill="currentColor"></path>
+                  <path d="M70.0614 63.5831C57.2186 63.5831 46.6422 70.2892 40.8504 78.4855L28.0076 65.8185H16.6758V181.052H43.6204V110.017C43.6204 99.3371 54.1968 91.6375 65.2648 91.6375C68.0348 91.6375 71.0566 92.1343 73.8267 93.1278L81.633 65.3099C77.6039 64.0562 73.5748 63.5713 70.0494 63.5713" fill="currentColor"></path>
+                  <path d="M431.525 158.214C412.135 158.214 397.29 143.063 397.29 123.441C397.29 103.82 412.135 88.6689 431.525 88.6689C450.915 88.6689 466.276 103.82 466.276 123.441C466.276 143.063 450.915 158.214 431.525 158.214ZM433.54 63.0864C415.912 63.0864 404.569 71.5311 397.53 78.9823L384.435 65.8185H372.6V243.146H399.544V170.124C404.569 175.091 415.9 183.796 433.54 183.796C467.02 183.796 493.473 156.227 493.473 123.441C493.473 90.6559 467.02 63.0864 433.54 63.0864Z" fill="currentColor"></path>
+                  <path d="M256.936 64.0807C244.345 64.0807 234.776 68.7998 226.718 75.7542V12.3243L217.053 2.7915H199.773V181.053H226.718V107.783C226.718 97.5993 236.791 89.6514 250.137 89.6514C262.476 89.6514 271.29 96.8542 271.29 112.005V181.053H298.738V112.005C298.738 77.481 278.089 64.0689 256.936 64.0689" fill="currentColor"></path>
+                  <path d="M742.347 158.214C722.969 158.214 707.608 143.063 707.608 123.441C707.608 103.82 722.969 88.6689 742.347 88.6689C761.725 88.6689 776.355 103.82 776.355 123.441C776.355 143.063 761.498 158.214 742.347 158.214ZM801.021 65.8185H785.672L774.34 76.9954C767.038 70.2893 756.461 63.0864 740.093 63.0864C706.601 63.0864 680.16 90.4194 680.16 123.441C680.16 156.463 706.601 183.796 740.345 183.796C758.224 183.796 769.304 175.103 774.34 169.887L785.672 181.064H801.021V65.8185Z" fill="currentColor"></path>
+                  <path d="M565.587 86.6819C579.929 86.6819 591.776 96.3685 593.527 109.284H536.868C539.638 96.1201 551.221 86.6819 565.587 86.6819ZM592.376 143.382C586.512 152.501 576.187 158.959 565.827 158.959C550.466 158.959 537.119 147.534 535.609 130.396H620.471V120.697C619.464 90.6441 598.815 63.0864 565.587 63.0864C532.359 63.0864 508.412 91.1527 508.412 123.69C508.412 156.227 532.335 183.808 565.827 183.808C586.92 183.808 602.772 172.264 612.281 158.781L592.364 143.394L592.376 143.382Z" fill="currentColor"></path>
+                </svg>
+              </span>
+              <svg width="100%" viewBox="0 0 40 245" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_5756_1719)">
+                <path d="M39.0539 19.0065C39.0539 8.51567 30.4321 0 19.7838 0C9.13547 0 0.513672 8.50384 0.513672 19.0065C0.513672 29.5092 9.14747 38.013 19.7838 38.013C30.4202 38.013 39.0539 29.5092 39.0539 19.0065Z" fill="currentColor"></path>
+                </g>
+                <defs>
+                <clipPath id="clip0_5756_1719">
+                <rect width="38.5273" height="244.648" fill="currentColor" transform="translate(0.527344)"></rect>
+                </clipPath>
+                </defs>
+              </svg>
+            </i>
+          
+            <div class="text-area">
+              <span>Scroll Down</span>
+              <span>Project: Aura Central Urban Village</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sc-about">
+        <div class="group-title">
+          <h2 class="title">Archipelago is a distinguished Australian city-making practice. We challenge the boundaries of conventional design to create great cities and buildings for people, now and in the future.</h2>
+        </div>
+      </section>
+
+      <section class="sc-video">
+        <h2 class="blind">archipelago 비디오</h2>
+        <div class="sticky-wrapper">
+
+          <div class="sticky">
+            <div class="group-img first">
+              <picture class="bg-area"><img src="./assets/images/intro4.jpg" alt></picture>
+              <picture class="logo-area"><img src="./assets/images/about-logo-reveal.svg" alt></picture>
+            </div>
+          
+            <div class="group-img second">
+              <picture class="bg-area"><img src="./assets/images/intro4.jpg" alt></picture>
+            </div>
+
+            <div class="group-sticky">
+              <picture class="sticky-area">
+                <img src="./assets/images/about-logo-white.svg" alt>
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sc-project padding">
+        <div class="inner">
+          <div class="group-headline">
+            <div class="headline-wrap">
+              <h2 class="headline">Feartured Projects</h2>
+            </div>
+
+            <div class="desc-area">
+              <p class="desc">Archipelago's portfolio of city making projects, from expansive urban renewal to intimate residential spaces, showcases our innovative and people-centric approach to city making.</p>
+              <a href="" class="link-common" aria-label="archipelago projects">
+                <span>View All Projects</span>
+                <svg width="100%" viewBox="0 0 23 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0001 8.22269L14.7774 0L14.0703 0.707107L21.1005 7.7373H0.28125V8.7373H21.0713L14.0703 15.7383L14.7774 16.4454L23.0001 8.22269Z" fill="currentColor"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <ul class="content-list side">
+            <li class="content-item">
+              <a href="">
+                <div class="img-area">
+                  <img src="./assets/images/project1.webp" alt>
+                  <div class="marquee-wrap">
+                    <div class="marquee-cont">
+                      <div class="marquee-box">
+                        <span>hota green bridge</span>
+                        <span>hota green bridge</span>
+                        <span>hota green bridge</span>
+                        <span>hota green bridge</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <strong class="title">HOTA Green Bridge</strong>
+              </a>
+            </li>
+            <li class="content-item">
+              <a href="">
+                <div class="img-area">
+                  <img src="./assets/images/project2.jpg" alt>
+                  <div class="marquee-wrap">
+                    <div class="marquee-cont">
+                      <div class="marquee-box">
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <strong class="title">Halcyon Blu</strong>
+              </a>
+            </li>
+          </ul>
+          
+          <ul class="content-list middle">
+            <li class="content-item">
+              <a href="">
+                <div class="img-area">
+                  <img src="./assets/images/project3.jpg" alt>
+                  <div class="marquee-wrap">
+                    <div class="marquee-cont">
+                      <div class="marquee-box">
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <strong class="title">Parkside Yeronga</strong>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="content-list side">
+            <li class="content-item">
+              <a href="">
+                <div class="img-area">
+                  <img src="./assets/images/project4.jpg" alt>
+                  <div class="marquee-wrap">
+                    <div class="marquee-cont">
+                      <div class="marquee-box">
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <strong class="title">The Mill at Moreton Bay</strong>
+              </a>
+            </li>
+            <li class="content-item">
+              <a href="">
+                <div class="img-area">
+                  <img class="last" src="./assets/images/project5.jpg" alt>
+                  <div class="marquee-wrap">
+                    <div class="marquee-cont">
+                      <div class="marquee-box">
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                        <span>halcyon Blu</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <strong class="title">Logan Civic and Community Precinct Plan</strong>
+              </a>
+
+              <a href="" class="link-common" aria-label="archipelago projects">
+                <span>View All Projects</span>
+                <svg width="100%" viewBox="0 0 23 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0001 8.22269L14.7774 0L14.0703 0.707107L21.1005 7.7373H0.28125V8.7373H21.0713L14.0703 15.7383L14.7774 16.4454L23.0001 8.22269Z" fill="currentColor"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sc-process padding olive-green">
+        <div class="inner flex">
+          <div class="group-headline">
+            <h2 class="headline">We're City Making Design Leaders</h2>
+            <div class="desc-area">
+              <p class="desc">From health and knowledge precincts to club houses...</p>
+              <a href="" class="link-common tan" aria-label="archipelago process">
+                <span>Discover Our Process</span>
+                <svg width="100%" viewBox="0 0 23 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0001 8.22269L14.7774 0L14.0703 0.707107L21.1005 7.7373H0.28125V8.7373H21.0713L14.0703 15.7383L14.7774 16.4454L23.0001 8.22269Z" fill="currentColor"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <ul class="content-list">
+            <li class="content-item">
+              <em class="number"><i class="data">100</i>+</em>
+              <div class="title-area">
+                <strong class="title">Workshops this year</strong>
+                <div class="img-wrap">
+                  <img src="./assets/images/process1.svg" alt>
+                </div>
+              </div>
+            </li>
+            <li class="content-item">
+              <em class="number"><i class="data">12</i></em>
+              <div class="title-area">
+                <strong class="title">Games Precincts, Venues + Overlay Plans</strong>
+                <div class="img-wrap">
+                  <img src="./assets/images/process2.svg" alt>
+                </div>
+              </div>
+            </li>
+            <li class="content-item">
+              <em class="number"><i class="data">1250</i>+</em>
+              <div class="title-area">
+                <strong class="title">Dwellings currently on our boards</strong>
+                <div class="img-wrap">
+                  <img src="./assets/images/process3.svg" alt>
+                </div>
+              </div>
+            </li>
+            <li class="content-item">
+              <em class="number"><i class="data">100</i>+</em>
+              <div class="title-area">
+                <strong class="title">City Shaping Master Planning
+
+                </strong>
+                <div class="img-wrap">
+                  <img src="./assets/images/process4.svg" alt>
+                </div>
+              </div>
+            </li>
+            <li class="content-item">
+              <em class="number"><i class="data">40</i>+</em>
+              <div class="title-area">
+                <strong class="title">People-oriented precincts</strong>
+                <div class="img-wrap">
+                  <img src="./assets/images/process5.svg" alt>
+                </div>
+              </div>
+            </li>
+            <li class="content-item">
+              <em class="number"><i class="data">20</i>+</em>
+              <div class="title-area">
+                <strong class="title">Beautiful bridges</strong>
+                <div class="img-wrap">
+                  <img src="./assets/images/process6.svg" alt>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sc-design padding dark-tan">
+        <div class="inner flex">
+          <div class="group-headline">
+            <div class="headline-wrap">
+              <h2 class="headline">Design Expertise</h2>
+            </div>
+            <div class="desc-area">
+              <p class="desc">Pushing beyond traditional design boundaries, Archipelago crafts visionary cities, buildings, landscapes and interiors centred around people and their wellbeing.</p>
+            </div>
+          </div>
+
+          <div class="group-design">
+            <picture><img src="./assets/images/design1.svg" alt></picture>
+            <div class="text-area">
+              <p class="desc">Multi-disciplinary design, cross-sector expertise that delivers neighbourhood and city-wide benefits for all.</p>
+              <a href="" class="link-common" aria-label="archipelago design">
+                <span>About Archipelago</span>
+                <svg width="100%" viewBox="0 0 23 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0001 8.22269L14.7774 0L14.0703 0.707107L21.1005 7.7373H0.28125V8.7373H21.0713L14.0703 15.7383L14.7774 16.4454L23.0001 8.22269Z" fill="currentColor"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <ul class="content-list">
+            <li class="content-item">
+              <a href="">
+                <figure class="img-area">
+                  <img src="./assets/images/design-list1.jpg" alt>
+                  <figcaption>Architecture</figcaption>
+                </figure>
+                <p class="desc">Working across every sector and scale, our team conceptualise and articulate city-shaping ideas into successfully delivered high-quality and enduring architecture.</p>
+              </a>
+            </li>
+            <li class="content-item">
+              <a href="">
+                <figure class="img-area">
+                  <img src="./assets/images/design-list2.jpg" alt>
+                  <figcaption>Urban Design</figcaption>
+                </figure>
+                <p class="desc">Leading with urban design, we think comprehensively about every project to realise the latent potential of the site and maximise benefit for all.</p>
+              </a>
+            </li>
+            <li class="content-item">
+              <a href="">
+                <figure class="img-area">
+                  <img src="./assets/images/design-list3.webp" alt>
+                  <figcaption>Landscape<br class="mobile"> Architecture</figcaption>
+                </figure>
+                <p class="desc">The relationship between buildings, landscapes, and the space between is intrinsic and essential. We are experts in creating high-quality public spaces.</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sc-working padding olive-green">
+        <h2 class="title">
+          <div class="inner">
+            what we're currently working on
+          </div>
+        </h2>
+        <div class="group-marquee">
+          <div class="marquee-wrap row">
+            <div class="wrap">
+              <span class="text">logan gold coast faster rail</span>
+              <span class="dot"></span>
+              <span class="text">ipswich hospital</span>
+              <span class="dot"></span>
+              <span class="text">logan gold coast faster rail</span>
+              <span class="dot"></span>
+              <span class="text">ipswich hospital</span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <div class="marquee-wrap reverse">
+            <div class="wrap">
+              <span class="text">coomera connector north and south</span>
+              <span class="dot"></span>
+              <span class="text">future medical facility</span>
+              <span class="dot"></span>
+              <span class="text">coomera connector north and south</span>
+              <span class="dot"></span>
+              <span class="text">future medical facility</span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <div class="marquee-wrap row">
+            <div class="wrap">
+              <span class="text">yeronga community is under construction</span>
+              <span class="dot"></span>
+              <span class="text">pomona placemaking pilot</span>
+              <span class="dot"></span>
+              <span class="text">yeronga community is under construction</span>
+              <span class="dot"></span>
+              <span class="text">pomona placemaking pilot</span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <div class="marquee-wrap reverse">
+            <div class="wrap">
+              <span class="text">redlands performing arts centre</span>
+              <span class="dot"></span>
+              <span class="text">halycon blu</span>
+              <span class="dot"></span>
+              <span class="text">redlands performing arts centre</span>
+              <span class="dot"></span>
+              <span class="text">halycon blu</span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <div class="marquee-wrap row">
+            <div class="wrap">
+              <span class="text">logan shared ring road is under construction</span>
+              <span class="dot"></span>
+              <span class="text">aura central urban village</span>
+              <span class="dot"></span>
+              
+              <span class="text">logan shared ring road is under construction</span>
+              <span class="dot"></span>
+              <span class="text">aura central urban village</span>
+              <span class="dot"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sc-recent padding dark-tan">
+        <div class="inner flex">
+          <div class="headline-wrap">
+            <h2 class="headline">Recent Articles</h2>
+          </div>
+
+          <ul class="content-list">
+            <li class="content-item">
+              <a href="">
+                <picture><img src="./assets/images/recent1.jpg" alt></picture>
+                <div class="text-area">
+                  <strong class="title">Competitors Turn Collaborators to Drive Urban Village’s Regeneration</strong>
+                  <p class="desc">Peter Edwards recently sat down with The Urban Developer to share how Archipelago created a collaborative and unifying urban vision for the future of the Stones Corner...</p>
+                </div>
+              </a>
+            </li>
+            <li class="content-item">
+              <a href="">
+                <picture><img src="./assets/images/recent2.jpg" alt></picture>
+                <div class="text-area">
+                  <strong class="title">Knowledge precincts as a catalyst for renewal</strong>
+                  <p class="desc">In this article Peter Edwards, Founding Director of Archipelago, reflects on how the focus on knowledge precincts in our cities and regional places...</p>
+                </div>
+              </a>
+            </li>
+            <li class="content-item">
+              <a href="">
+                <picture><img src="./assets/images/recent3.jpg" alt></picture>
+                <div class="text-area">
+                  <strong class="title">Disruption + Innovation</strong>
+                  <p class="desc">“We think the design for manufacture and assembly space will continue to emerge in Queensland and feature in housing options for architects.”</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <a href="" class="link-common" aria-label="archipelago projects">
+            <span>View All Articles</span>
+            <svg width="100%" viewBox="0 0 23 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0001 8.22269L14.7774 0L14.0703 0.707107L21.1005 7.7373H0.28125V8.7373H21.0713L14.0703 15.7383L14.7774 16.4454L23.0001 8.22269Z" fill="currentColor"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="sc-team padding">
+        <div class="inner flex">
+          <div class="group-headline">
+            <div class="headline-wrap">
+              <h2 class="headline">Team</h2>
+            </div>
+            <div class="desc-area">
+              <p class="desc">The depth of our multi-disciplinary experience coupled with our tight-knit, team-based approach ensures that Archipelago offers the intelligence and breadth of large corporate practices with the immediacy and flexibility of a small design studio.</p>
+              <a href="" class="link-common" aria-label="archipelago team">
+                <span>Meet The Team</span>
+                <svg width="100%" viewBox="0 0 23 17" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0001 8.22269L14.7774 0L14.0703 0.707107L21.1005 7.7373H0.28125V8.7373H21.0713L14.0703 15.7383L14.7774 16.4454L23.0001 8.22269Z" fill="currentColor"></path>
+                </svg>
+              </a>    
+            </div>
+          </div>
+
+          <figure>
+            <img src="./assets/images/team1.jpg" alt>
+            <figcaption>The Archipelago Team</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="sc-contact">
+        <h2 class="blind">archipelago contact</h2>
+        <img src="./assets/images/contact1.webp" alt>
+        <div class="group-marquee">
+          <a href="" class="marquee-wrap" aria-label="archipelago contact">
+            <span class="text">contact archipelago</span>
+            <span class="dot"></span>
+            <span class="text">contact archipelago</span>
+            <span class="dot"></span>
+            <span class="text">contact archipelago</span>
+            <span class="dot"></span>
+          </a>
+        </div>
+      </section>
+
+      <footer class="footer olive-green">
+        <h2 class="blind">archipelago footer</h2>
+        <div class="inner">
+          <div class="group-top">
+            <a href="" class="logo">
+              <svg width="100%" viewBox="0 0 485 97" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M126.759 58.0527L134.822 64.3665C130.645 69.0299 124.816 72.3347 118.21 72.3347C105.677 72.3347 94.6973 61.9355 94.6973 48.7259C94.6973 35.5162 105.481 25.1184 118.21 25.1184C124.33 25.1184 130.743 27.6452 133.852 32.017L126.662 39.3099C124.906 37.172 121.9 35.1327 118.21 35.1327C110.728 35.1327 105.19 41.5437 105.19 48.7326C105.19 55.8243 110.727 62.3339 118.21 62.3339C121.9 62.3339 124.62 60.4878 126.759 58.0595V58.0527Z" fill="currentColor"></path>
+                <path d="M407.459 43.6735C407.459 38.8115 403.863 34.9301 398.91 34.9301C394.048 34.9301 390.458 38.8156 390.458 43.6735C390.458 48.6286 394.05 52.4169 398.91 52.4169C403.863 52.4169 407.459 48.6354 407.459 43.6735ZM388.221 80.3961C388.221 83.4078 391.04 86.5154 396.676 86.5154H402.213C407.46 86.5154 410.083 83.3106 410.083 80.3961C410.083 77.9651 408.238 75.6354 404.74 75.6354H392.596C392.304 75.6354 391.921 75.7327 391.622 75.7327C389.388 76.7051 388.223 78.4527 388.223 80.3961H388.221ZM419.601 35.5122H415.035C416.201 37.9431 417.076 41.0494 417.076 43.6735C417.076 53.8728 408.916 61.841 398.91 61.841C395.899 61.841 392.984 60.9658 390.458 59.6059C389.486 60.1893 388.999 61.1603 388.999 62.3258C388.999 64.0748 390.165 65.9196 392.595 65.9196H404.739C414.454 65.9196 419.699 73.7906 419.699 80.1003C419.699 84.0831 418.047 88.3576 415.035 91.1748C412.801 93.314 408.72 96.1313 402.212 96.1313H396.675C385.696 96.1313 378.893 88.941 378.893 81.6562C378.893 77.5735 381.422 73.2031 384.142 71.6487C381.422 69.6093 380.06 66.6935 380.06 63.6804C380.06 60.4743 381.615 57.1722 384.625 54.7425C382.194 51.7322 380.837 48.0384 380.837 43.6681C380.837 33.8564 388.51 25.4034 398.908 25.4034C403.572 25.4034 407.36 26.9578 410.469 29.5819L413.868 26.1799H419.6V35.5068L419.601 35.5122Z" fill="currentColor"></path>
+                <path d="M459.546 48.7245C459.546 41.4316 454.106 35.2191 446.624 35.2191C439.049 35.2191 433.608 41.4316 433.608 48.7245C433.608 56.0175 439.145 62.3258 446.624 62.3258C454.012 62.3258 459.546 56.0121 459.546 48.7245ZM470.137 48.7245C470.145 51.819 469.543 54.8846 468.365 57.7461C467.187 60.6077 465.457 63.2091 463.273 65.4016C461.09 67.5942 458.495 69.3349 455.639 70.5243C452.782 71.7137 449.719 72.3284 446.624 72.3334C433.804 72.3334 423.018 62.0341 423.018 48.7245C423.018 35.4149 433.804 25.2143 446.624 25.2143C459.355 25.2143 470.137 35.4163 470.137 48.7245Z" fill="currentColor"></path>
+                <path d="M193.707 26.1867H187.006V71.2637H197.398V29.8777L193.707 26.1867Z" fill="currentColor"></path>
+                <path d="M315.891 1.72833H309.189V71.2637H319.582V5.42072L315.891 1.72833Z" fill="currentColor"></path>
+                <path d="M198.786 7.87329C198.786 6.40418 198.351 4.96806 197.534 3.74654C196.718 2.52501 195.558 1.57294 194.201 1.01073C192.844 0.448525 191.35 0.301434 189.909 0.588044C188.468 0.874655 187.145 1.58209 186.106 2.62091C185.067 3.65974 184.36 4.98329 184.073 6.42418C183.786 7.86507 183.934 9.35858 184.496 10.7159C185.058 12.0731 186.01 13.2332 187.232 14.0494C188.453 14.8656 189.889 15.3013 191.358 15.3013C193.328 15.3013 195.218 14.5187 196.611 13.1257C198.004 11.7327 198.786 9.84332 198.786 7.87329Z" fill="currentColor"></path>
+                <path d="M485 7.87329C485 6.40418 484.564 4.96806 483.748 3.74654C482.932 2.52501 481.772 1.57294 480.415 1.01073C479.057 0.448525 477.564 0.301434 476.123 0.588044C474.682 0.874655 473.358 1.58209 472.32 2.62091C471.281 3.65974 470.573 4.98329 470.287 6.42418C470 7.86507 470.147 9.35858 470.709 10.7159C471.272 12.0731 472.224 13.2332 473.445 14.0494C474.667 14.8656 476.103 15.3013 477.572 15.3013C479.542 15.3013 481.431 14.5187 482.824 13.1257C484.217 11.7327 485 9.84332 485 7.87329Z" fill="currentColor"></path>
+                <path d="M90.3229 25.3129C88.1154 25.3141 85.9404 25.844 83.9796 26.8581C82.0189 27.8722 80.3294 29.341 79.0527 31.1418L74.0989 26.1799H69.7272V71.2583H80.1263V43.479C80.1263 39.3018 84.205 36.2901 88.4794 36.2901C89.6061 36.2949 90.7237 36.4918 91.7842 36.8722L94.7959 25.9922C93.3482 25.544 91.8412 25.3164 90.3256 25.3169L90.3229 25.3129Z" fill="currentColor"></path>
+                <path d="M229.78 62.3258C222.299 62.3258 216.568 56.401 216.568 48.7245C216.568 41.048 222.299 35.1246 229.78 35.1246C237.261 35.1246 243.185 41.0494 243.185 48.7245C243.185 56.3997 237.258 62.3258 229.78 62.3258ZM230.558 25.117C223.755 25.117 219.382 28.4218 216.665 31.3295L211.611 26.1799H207.045V95.5465H217.444V66.9893C219.383 68.9327 223.756 72.3334 230.559 72.3334C243.477 72.3334 253.679 61.5493 253.679 48.7245C253.679 35.8052 243.477 25.117 230.559 25.117H230.558Z" fill="currentColor"></path>
+                <path d="M162.42 25.5046C157.558 25.5046 153.871 27.3522 150.762 30.0722V5.26135L147.035 1.53386H140.367V71.2637H150.766V42.6039C150.766 38.6211 154.652 35.5122 159.802 35.5122C164.562 35.5122 167.963 38.3294 167.963 44.2556V71.2664H178.552V44.2556C178.552 30.7501 170.584 25.5046 162.424 25.5046H162.42Z" fill="currentColor"></path>
+                <path d="M349.693 62.3258C342.214 62.3258 336.288 56.401 336.288 48.7245C336.288 41.048 342.214 35.1246 349.693 35.1246C357.079 35.1246 362.811 41.0494 362.811 48.7245C362.811 56.3997 357.079 62.3258 349.693 62.3258ZM372.33 26.1799H366.402L362.029 30.5516C359.211 27.9289 355.129 25.1116 348.817 25.1116C335.895 25.1116 325.693 35.7998 325.693 48.7191C325.693 61.5493 335.895 72.328 348.911 72.328C355.811 72.328 360.086 68.9273 362.029 66.888L366.402 71.2583H372.326V26.1799H372.33Z" fill="currentColor"></path>
+                <path d="M44.0614 45.3239H19.5113L31.7513 13.3619L42.8162 42.2514V42.2406L54.0555 71.2637H63.5052V64.6069L38.6512 1.8985H24.854L0 64.6069V71.2637H9.50647L15.4299 55.8162H40.0193L44.0614 45.3239Z" fill="currentColor"></path>
+                <path d="M281.502 34.3466C287.039 34.3466 291.605 38.1363 292.284 43.1886H270.424C271.493 38.039 275.962 34.3466 281.499 34.3466H281.502ZM291.836 56.5266C289.574 60.0961 285.592 62.6189 281.596 62.6189C275.67 62.6189 270.522 58.1473 269.938 51.4459H302.679V47.6535C302.29 35.9038 294.322 25.1143 281.502 25.1143C268.681 25.1143 259.446 36.0929 259.446 48.8191C259.446 61.4493 268.674 72.3307 281.595 72.3307C289.732 72.3307 295.848 67.8198 299.518 62.5392L291.835 56.5239L291.836 56.5266Z" fill="currentColor"></path>
+              </svg>
+            </a>
+            <ul class="footer-list">
+              <li class="footer-item">
+                <a href="">Projects</a>
+              </li>
+              <li class="footer-item">
+                <a href="">About Us</a>
+                <a href="">Workshops</a>
+              </li>
+              <li class="footer-item">
+                <a href="">Team</a>
+                <a href="">Careers</a>
+              </li>
+              <li class="footer-item">
+                <a href="">Articles</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="group-middle">
+            <div class="col-left">
+              <div class="info-area">
+                <div class="info-wrap">
+                  <strong class="title">Office</strong>
+                  <a href="" class="link-contact"><address>Turrbal and Yuggera/Jaggera Country<br> Mezzanine Floor, 33 Queen Street<br> Brisbane QLD 4000</address></a>
+                </div>
+                <a href="" class="link-sns">LinkedIn</a>
+                <a href="" class="link-sns">Instagram</a>
+              </div>
+            
+              <div class="info-area">
+                <div class="info-wrap">
+                  <strong class="title">Phone</strong>
+                  <a href="tel:" class="link-contact">+61 7 3236 4606</a>
+                </div>
+                <div class="info-wrap">
+                  <strong class="title">Email</strong>
+                  <a href="mailto:" class="link-contact mail">mail@archipelago.com.au</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-right">
+              <strong class="title">Subscribe</strong>
+              <p class="desc">Our strategy, thinking and insights. Shared with you.</p>
+              <form method="get">
+                <fieldset>
+                  <legend class="blind">archipelago Subscribe</legend>
+                  <input class="input-text" placeholder="Enter Your Email"></input>
+                  <input type="submit" value="" class="input-submit" aria-label="검색" aria-expanded="false">
+                </fieldset>
+              </form>
+            </div>
+          </div>
+
+          <div class="group-bottom">
+            <div class="group-flag">
+              <div class="flag-wrap">
+                <svg width="100%" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M39 0H0V12H39V0Z" fill="black"></path>
+                  <path d="M39 12H0V24H39V12Z" fill="#FF0000"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.8603 11.9104C25.8679 12.7437 25.7092 13.5701 25.3936 14.3421C25.078 15.114 24.6116 15.8162 24.0214 16.4081C23.4312 16.9999 22.7288 17.4697 21.9549 17.7903C21.181 18.1109 20.3508 18.276 19.5123 18.276C18.6738 18.276 17.8437 18.1109 17.0697 17.7903C16.2958 17.4697 15.5935 16.9999 15.0033 16.4081C14.413 15.8162 13.9466 15.114 13.631 14.3421C13.3154 13.5701 13.1568 12.7437 13.1643 11.9104C13.1568 11.0772 13.3154 10.2508 13.631 9.47881C13.9466 8.70685 14.413 8.00468 15.0033 7.41283C15.5935 6.82099 16.2958 6.3512 17.0697 6.03059C17.8437 5.70999 18.6738 5.54492 19.5123 5.54492C20.3508 5.54492 21.181 5.70999 21.9549 6.03059C22.7288 6.3512 23.4312 6.82099 24.0214 7.41283C24.6116 8.00468 25.078 8.70685 25.3936 9.47881C25.7092 10.2508 25.8679 11.0772 25.8603 11.9104V11.9104Z" fill="#FFFF00"></path>
+                </svg>
+                <svg width="100%" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M39 0H0V24H39V0Z" fill="#00CA00"></path>
+                  <path d="M39 5.53809H0V19.3842H39V5.53809Z" fill="#272520"></path>
+                  <path d="M39 6.46191H0V18.4619H39V6.46191Z" fill="#0001FD"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.3984 17.1558L16.1577 15.2704C16.1577 15.2704 14.9263 13.5558 14.9263 11.3274C14.9263 9.09891 16.6855 7.38477 18.7968 7.38477L19.6767 8.75589L20.556 7.38477C22.3158 7.38477 24.4271 8.75589 24.4271 11.1561C24.4271 13.5558 23.1951 15.2704 23.1951 15.2704L25.1307 17.3276L21.4359 16.4703V10.9848C21.4359 10.6418 20.7323 9.95623 19.6767 9.95623C18.7968 9.95623 18.0932 10.6418 18.0932 10.9848V16.299L14.3984 17.1558V17.1558Z" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9601 13.1703L19.2128 12.3831L18.543 11.8785L19.3896 11.8693L19.6751 11.0928L19.9457 11.8741L20.7918 11.8988L20.1125 12.3908L20.3504 13.1828L19.6597 12.7053L18.9601 13.1703V13.1703Z" fill="white"></path>
+                </svg>
+              </div>
+              <p class="desc">Archipelago® acknowledges the Traditional Custodians of the land on which we work, the Yuggera and Turrbal peoples. We pay our respects to all Elders, past, present and emerging.</p>
+            </div>
+
+            <div class="group-flag">
+              <div class="flag-wrap">
+                <svg width="100%" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#ProgressPrideFlag11-stripe-2018-_clip0-5438-35577)">
+                  <path d="M0 0H39V24H0V0Z" fill="#750787"></path>
+                  <path d="M0 0H39V20H0V0Z" fill="#004DFF"></path>
+                  <path d="M0 0H39V16H0V0Z" fill="#008026"></path>
+                  <path d="M0 0H39V12H0V0Z" fill="#FFED00"></path>
+                  <path d="M0 0H39V8H0V0Z" fill="#FF8C00"></path>
+                  <path d="M0 0H39V4H0V0Z" fill="#E40303"></path>
+                  <path d="M-0.00585938 6.04688L6.17564 11.9996L-0.00585938 17.9524V6.04688Z" fill="white"></path>
+                  <path d="M-0.00585938 6.04706V3.02344L9.23064 11.9998L-0.00585938 20.9762V17.9526L6.17564 11.9998L-0.00585938 6.04706Z" fill="#FFAFC8"></path>
+                  <path d="M-0.00585938 3.02362V0L12.4286 12L-0.00585938 24V20.9764L9.23064 12L-0.00585938 3.02362Z" fill="#74D7EE"></path>
+                  <path d="M-0.00585938 0L12.4286 12L-0.00585938 24H3.12064L15.4966 12L3.12064 0H-0.00585938Z" fill="#613915"></path>
+                  <path d="M3.11914 0H6.23914L18.6151 12L6.23914 24H3.11914L15.4951 12L3.11914 0Z" fill="black"></path>
+                  </g>
+                  <defs>
+                  <clipPath id="ProgressPrideFlag11-stripe-2018-_clip0-5438-35577">
+                  <rect width="39" height="24" fill="white"></rect>
+                  </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <p class="desc">Archipelago® is a proudly inclusive organisation and an ally of LGBTIQ+ community and the movement toward equality.</p>
+            </div>
+          </div>
+
+          <div class="group-copy">
+            <small>&copy; Archipelago 2024</small>
+            <a href="">Website by IGNITE</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
