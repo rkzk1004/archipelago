@@ -91,47 +91,58 @@ html{
   .group-headline .desc-area .desc{width: 100%;}
 }
 
-/* ico-archipelago */
-.ico-archipelago{
+/* ico-main */
+.ico-main{
   display: flex;
 }
-.ico-archipelago svg path{
+.ico-main svg path{
   fill: #fff;
   stroke: #fff;
 }
-.ico-archipelago svg:first-child{
+.ico-main svg:nth-child(1){
   width: 10rem;
 }
-.ico-archipelago .ico-second-wrap{
+.ico-main .ico-second-wrap{
   width: 0;
   overflow: hidden;
 }
-.ico-archipelago .ico-second-wrap svg{
+.ico-main .ico-second-wrap svg{
   width: 65rem;
   max-width: none;
 }
-.ico-archipelago svg:nth-child(3){
+.ico-main svg.dot{
   width: 2.4rem;
 }
 @media(max-width:991px){
-  .ico-archipelago svg:first-child{
+  .ico-main svg:nth-child(1){
     width:6.3rem;
   }
-  .ico-archipelago .ico-second-wrap svg{
+  .ico-main .ico-second-wrap svg{
     width: 40rem;
   }
-  .ico-archipelago svg:nth-child(3){
+  .ico-main svg.dot{
     width: 1.5rem;
   }
 }
 @media(max-width:767px){
-  .ico-archipelago svg:first-child{
+  .ico-main svg:nth-child(1){
     width:4rem;
   }
-  .ico-archipelago .ico-second-wrap svg{
+  .ico-main .ico-second-wrap svg{
     width: 25.5rem;
   }
-  .ico-archipelago svg:nth-child(3){
+  .ico-main svg.dot{
+    width: .8rem;
+  }
+}
+@media(max-width:501px){
+  .ico-main svg:first-child{
+    width:3rem;
+  }
+  .ico-main .ico-second-wrap svg{
+    width: 20rem;
+  }
+  .ico-main svg.dot{
     width: .8rem;
   }
 }

@@ -17,7 +17,7 @@
   z-index: 1;
   display: flex;
 }
-.sc-intro-motion .group-ico .ico-archipelago{
+.sc-intro-motion .group-ico .ico-main{
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -62,6 +62,7 @@
   margin-bottom: 8px;
   width: 8px;
   height: 8px;
+  border-radius: 100%;
   background: var(--color-charcoal);
 }
 .sc-intro-motion .group-text .desc{
@@ -139,7 +140,7 @@
   position: relative;
   height: 100%;
 }
-.sc-intro .ico-archipelago{
+.sc-intro .ico-main{
   position: absolute;
   top: 15svh;
   left: 0;
@@ -157,6 +158,16 @@
 .sc-intro .text-area span{
   font-size: var(--font-size-h6);
   color: #fff;
+}
+@media(max-width:991px){
+  .sc-intro .ico-main .ico-second-wrap{
+    width: 40rem;
+  }
+}
+@media(max-width:767px){
+  .sc-intro .ico-main .ico-second-wrap{
+    width: 20rem;
+  }
 }
 
 /* sc-about */

@@ -174,7 +174,15 @@ body::-webkit-scrollbar-thumb{
   opacity: 1;
   visibility: visible;
 }
-.header .group-search.on .ico-archipelago svg{
+.header .group-search .ico-main{
+  /* background: #ccc; */
+}
+.header .group-search .ico-main svg{
+  opacity: 0;
+  transition: opacity .2s;
+  transition-delay: .1s;
+}
+.header .group-search.on .ico-main svg{
   opacity: 1;
 }
 .header .group-search .inner{
@@ -182,11 +190,6 @@ body::-webkit-scrollbar-thumb{
   display: flex;
   align-items: end;
   justify-content: space-between;
-}
-.header .group-search .ico-archipelago svg{
-  opacity: 0;
-  transition: opacity .2s;
-  transition-delay: .1s;
 }
 .header .group-search form{
   width: 31.5%;
@@ -256,10 +259,10 @@ body::-webkit-scrollbar-thumb{
   .header .group-search.on .inner{
     gap: 2rem;
   }
-  .header .group-search .ico-archipelago svg:first-child{
+  .header .group-search .ico-main svg:first-child{
     width: 2rem;
   }
-  .header .group-search .ico-archipelago svg:last-child{
+  .header .group-search .ico-main svg:last-child{
     width: 0.5rem;
   }
   .header .mobile-list{
