@@ -174,9 +174,6 @@ body::-webkit-scrollbar-thumb{
   opacity: 1;
   visibility: visible;
 }
-.header .group-search .ico-main{
-  /* background: #ccc; */
-}
 .header .group-search .ico-main svg{
   opacity: 0;
   transition: opacity .2s;
