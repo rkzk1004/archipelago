@@ -124,6 +124,11 @@
     height: 18rem;
   }
 }
+@media(max-width:570px){
+  .sc-intro-motion{
+    display: none;
+  }
+}
 
 /* sc-intro */
 .sc-intro{
@@ -166,7 +171,12 @@
 }
 @media(max-width:767px){
   .sc-intro .ico-main .ico-second-wrap{
-    width: 20rem;
+    width: 33rem;
+  }
+}
+@media(max-width:500px){
+  .sc-intro .text-area span{
+    font-size: 16px;
   }
 }
 
@@ -439,6 +449,11 @@
     width: 12rem;
   }
 }
+@media(max-width:500px){
+  .sc-process .content-item .title-area .title{
+    font-size: 16px;
+  }
+}
 
 /* sc-design */
 .sc-design .group-design{
@@ -551,6 +566,7 @@
   display: flex;
   flex-direction: column;
   gap: 6.5rem;
+  overflow: hidden;
 }
 .sc-working .marquee-wrap{
   display: flex;

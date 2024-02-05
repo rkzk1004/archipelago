@@ -82,7 +82,7 @@ ScrollTrigger.matchMedia({
     .to($('.sc-intro-motion'),{height:0,duration:1},'c')
     .to(introMotionSvgGroup,{left:'41%'},'c-=0.3')
   },
-  '(min-width:502) and (max-width:767px)':function(){
+  '(min-width:570px) and (max-width:767px)':function(){
     const introMotionTl = gsap.timeline({})
     introMotionTl
     .from($('body'),{opacity:0})
@@ -95,7 +95,7 @@ ScrollTrigger.matchMedia({
     
     .to(introMotionTitle,{yPercent:100,delay:0.5})
     
-    .to(introMotionSvg,{width:'25.5rem',duration:1})
+    .to(introMotionSvg,{width:'33rem',duration:1})
     
     .to(introMotionTitleArea,{yPercent:100,opacity:0},'b')
     .to(introMotionImgArea,{yPercent:100,opacity:0},'b')
@@ -103,28 +103,6 @@ ScrollTrigger.matchMedia({
     
     .to($('.sc-intro-motion'),{height:0,duration:1},'c')
     .to(introMotionSvgGroup,{left:'39%'},'c-=0.3')
-  },
-  '(max-width:500px)':function(){
-    const introMotionTl = gsap.timeline({})
-    introMotionTl
-    .from($('body'),{opacity:0})
-    
-    .to(introMotionTitle[0],{yPercent:-100},'a+=0.5')
-    .to(introMotionTitle[1],{yPercent:-100},'a+=0.9')
-    .to(introMotionTitle[2],{yPercent:-100},'a+=1.3')
-    
-    .to(introMotionShade,{clipPath:'polygon(0 0, 100% 0, 100% 100%, 0 100%)',duration:1.5})
-    
-    .to(introMotionTitle,{yPercent:100,delay:0.5})
-    
-    .to(introMotionSvg,{width:'20rem',duration:1})
-    
-    .to(introMotionTitleArea,{yPercent:100,opacity:0},'b')
-    .to(introMotionImgArea,{yPercent:100,opacity:0},'b')
-    .to(introMotionInner,{paddingTop:'15vh'},'b')
-    
-    .to($('.sc-intro-motion'),{height:0,duration:1},'c')
-    .to(introMotionSvgGroup,{left:'40%'},'c-=0.3')
   }
 })
 

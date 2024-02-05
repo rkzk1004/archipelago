@@ -7,7 +7,7 @@ body{
   background-color: var(--color-light-tan);
   color: var(--color-charcoal);
   overflow-x: hidden;
-  cursor: none !important;
+  cursor: none;
 }
 body::-webkit-scrollbar{
   width: 6px;
@@ -55,13 +55,18 @@ body::-webkit-scrollbar-thumb{
     padding: 0 1rem;
   }
 }
+@media(max-width:499px){
+  body{
+    cursor: pointer;
+  }
+}
 
 /* header */
 .header{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background: transparent;
   z-index: 99;
   transform: translateY(0);
@@ -322,6 +327,16 @@ body::-webkit-scrollbar-thumb{
     font-size: var(--font-size-p-regular);
   }
 }
+@media(max-width:500px){
+  .header .group-search.on .inner{
+    gap: 4rem;
+  }
+  .header .mobile-item .title,
+  .header .mobile-subitem a,
+  .header .group-search form .input-text::placeholder{
+    font-size: 16px;
+  }
+}
 
 /* footer */
 .footer{
@@ -534,5 +549,16 @@ body::-webkit-scrollbar-thumb{
   }
   .footer .group-middle fieldset .input-text::placeholder{
     font-size: var(--font-size-p-regular);
+  }  
+}
+@media(max-width:500px){
+  .footer .group-middle .title{
+    font-size: 20px;
+  }
+  .footer .group-top .footer-item a,
+  .footer .group-middle .link-contact,
+  .footer .group-middle .col-right .desc,
+  .footer .group-middle fieldset .input-text::placeholder{
+    font-size: 16px;
   }  
 }
