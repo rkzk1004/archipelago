@@ -563,6 +563,7 @@
 
 /* sc-working */
 .sc-working{
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 6.5rem;
